@@ -26,7 +26,7 @@ pub struct Party {
 
 impl Default for Party {
     fn default() -> Self {
-        Party {
+        Self {
             at_restaurant: true,
             num_people: 8,
             cake: Cake::Chocolate,
@@ -84,7 +84,7 @@ fn main() {
 
     let party = Party {
         cake: Cake::MapleBacon,
-        ..Party::default()
+        ..Default::default()
     };
     println!("Yes! My party has my favorite {:?} cake!", party.cake);
 
